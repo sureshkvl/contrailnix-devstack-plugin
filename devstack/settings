@@ -1,0 +1,26 @@
+#!/bin/bash
+
+
+# General settings
+#----------------
+
+ADMIN_PASSWORD=${ADMIN_PASSWORD:-"admin"}
+
+
+# Devstack source plugin with $dir varaiable set to plugin's directory
+CONTRAIL_PLUGIN_DIR="$dir/devstack"
+#PLUGIN_DIR=$(dirname "${BASH_SOURCE[0]}")
+
+CONTRAIL_SCREEN_NAME=${CONTRAIL_SCREEN_NAME:-"contrail"}
+CONTRAIL_ADMIN_USER=${CONTRAIL_ADMIN_USER:-"admin"}
+CONTRAIL_ADMIN_PASSWORD=${CONTRAIL_ADMIN_PASSWORD:-$ADMIN_PASSWORD}
+CONTRAIL_ADMIN_PROJECT=${CONTRAIL_ADMIN_PROJECT:-"admin"}
+
+# Contrail neutron plugin configuration functions
+#source $CONTRAIL_PLUGIN_DIR/lib/neutron_plugins/opencontrail
+
+# Source / build options
+#-----------------------
+
+CONTRAIL_REPO=${CONTRAIL_REPO:-https://github.com/juniper/contrail-vnc}
+CONTRAIL_BRANCH=${CONTRAIL_BRANCH:-"R3.2"}
